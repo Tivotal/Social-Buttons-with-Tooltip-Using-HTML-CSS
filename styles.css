@@ -1,0 +1,104 @@
+/* Created by Tivotal */
+
+/* Google Fonts(Poppins) */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #eee;
+}
+
+.wrapper {
+  height: 120px;
+  width: 100%;
+  display: inline-flex;
+  justify-content: center;
+  padding-top: 40px;
+}
+
+.wrapper .icon {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  background: #fff;
+  border-radius: 50%;
+  margin: 15px;
+  font-size: 19px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .icon .tooltip {
+  position: absolute;
+  top: 0;
+  font-size: 14px;
+  background: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .icon .tooltip::before {
+  position: absolute;
+  content: "";
+  width: 8px;
+  height: 8px;
+  background: #fff;
+  bottom: -3px;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+  transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .icon:hover .tooltip {
+  opacity: 1;
+  pointer-events: auto;
+  top: -45px;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.1);
+}
+
+.wrapper .icon.facebook:hover,
+.wrapper .icon.facebook:hover .tooltip,
+.wrapper .icon.facebook:hover .tooltip::before {
+  background: #1877f2;
+  color: #fff;
+}
+
+.wrapper .icon.instagram:hover,
+.wrapper .icon.instagram:hover .tooltip,
+.wrapper .icon.instagram:hover .tooltip::before {
+  background: #e1306c;
+  color: #fff;
+}
+
+.wrapper .icon.twitter:hover,
+.wrapper .icon.twitter:hover .tooltip,
+.wrapper .icon.twitter:hover .tooltip::before {
+  background: #1da1f2;
+  color: #fff;
+}
+
+.wrapper .icon.github:hover,
+.wrapper .icon.github:hover .tooltip,
+.wrapper .icon.github:hover .tooltip::before {
+  background: #222;
+  color: #fff;
+}
