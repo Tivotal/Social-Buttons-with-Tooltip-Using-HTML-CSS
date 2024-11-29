@@ -45,6 +45,7 @@ body {
 
 .wrapper .icon .tooltip {
   position: absolute;
+  /* top: -45px; */
   top: 0;
   font-size: 14px;
   background: #fff;
